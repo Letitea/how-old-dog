@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>狗狗年齡換算器（UCSD 公式）</title>
+</head>
+<body>
+  <header>
+    <div class="avatar"></div>
+    <h1>狗狗年齡換算器（使用 UCSD 研究公式）</h1>
+    <div class="muted">公式來源說明：human_age = 16 × ln(dog_age) + 31（dog_age 單位：年）。</div>
+  </header>
+
+  <main class="card">
+    <label for="birth">輸入狗狗出生日期</label>
+    <input id="birth" type="date" />
+    <div style="margin-top:10px">
+      <button id="calc">計算現在年齡</button>
+      <button id="clear" style="background:#6b6b6b;margin-left:8px">清除</button>
+    </div>
+
+    <div class="result" id="result" aria-live="polite"></div>
+
+    <div class="warning" id="note" style="display:none"></div>
+
+    <footer>
+      <small>說明：此工具直接將狗狗實際年齡（年，含小數）帶入 UCSD 的公式計算人類等效年齡。<br>
+      注意：該公式為研究推估，對於小於 1 歲的幼犬外推結果可能不合常識（請參考傳統對照表作為補充）。</small>
+    </footer>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
